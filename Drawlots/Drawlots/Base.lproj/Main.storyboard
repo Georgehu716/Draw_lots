@@ -57,6 +57,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="A1a-nO-d68" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
@@ -79,7 +80,7 @@
                                     <navigationItem title="随机数" id="6QU-UP-Rrv">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="zYL-X9-AOI">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="te5-W8-je3"/>
+                                                <segue destination="A1a-nO-d68" kind="unwind" unwindAction="exitToHereWithSender:" id="7e5-aW-tvd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -117,6 +118,9 @@
                                 <rect key="frame" x="112" y="475" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="random:" destination="fC1-ib-lXf" eventType="touchUpInside" id="r1X-bF-iZT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-IU-mFa">
                                 <rect key="frame" x="112" y="270" width="150" height="126"/>
@@ -128,6 +132,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="end" destination="hCl-Po-xZ1" id="odM-KZ-F1R"/>
+                        <outlet property="result" destination="FwN-IU-mFa" id="eOf-Lu-Whd"/>
+                        <outlet property="start" destination="8ia-Oe-G6U" id="vQB-uy-HwB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbW-lz-eWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +161,7 @@
                                     <navigationItem title="抛硬币" id="6c2-Ah-1Me">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="Sa4-bq-Ajd">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="utr-Bs-cEu"/>
+                                                <segue destination="A1a-nO-d68" kind="unwind" unwindAction="exitToHereWithSender:" id="hjn-HT-roe"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -201,7 +210,7 @@
                                     <navigationItem title="掷骰子" id="6ws-Z7-act">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="m5I-sv-PO3">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="gua-YB-CjB"/>
+                                                <segue destination="A1a-nO-d68" kind="unwind" unwindAction="exitToHereWithSender:" id="dqL-lA-JLs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -216,7 +225,4 @@
             <point key="canvasLocation" x="24.800000000000001" y="689.5052473763119"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="gua-YB-CjB"/>
-    </inferredMetricsTieBreakers>
 </document>
