@@ -14,6 +14,8 @@
 		3F010F2A21E3704B000BECCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F010F2821E3704B000BECCE /* LaunchScreen.storyboard */; };
 		3F010F3521E3704C000BECCE /* DrawlotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F010F3421E3704C000BECCE /* DrawlotsTests.swift */; };
 		3F010F4021E3704C000BECCE /* DrawlotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F010F3F21E3704C000BECCE /* DrawlotsUITests.swift */; };
+		98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */; };
+		98065CEF21E5E085008F8942 /* CPK3DiceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */; };
 		985DC08221E384BC006E221B /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08121E384BC006E221B /* RandomViewController.swift */; };
 		985DC08421E38556006E221B /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08321E38556006E221B /* CoinViewController.swift */; };
 		985DC08621E38567006E221B /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08521E38567006E221B /* DiceViewController.swift */; };
@@ -50,6 +52,8 @@
 		3F010F3B21E3704C000BECCE /* DrawlotsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawlotsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F010F3F21E3704C000BECCE /* DrawlotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawlotsUITests.swift; sourceTree = "<group>"; };
 		3F010F4121E3704C000BECCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DiceAnimationImage.xcassets; sourceTree = "<group>"; };
+		98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPK3DiceAnimationView.swift; sourceTree = "<group>"; };
 		985DC08121E384BC006E221B /* RandomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		985DC08321E38556006E221B /* CoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		985DC08521E38567006E221B /* DiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
@@ -108,8 +112,10 @@
 				3F010F2321E3704B000BECCE /* Main.storyboard */,
 				985DC08321E38556006E221B /* CoinViewController.swift */,
 				985DC08521E38567006E221B /* DiceViewController.swift */,
+				98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */,
 				985DC08121E384BC006E221B /* RandomViewController.swift */,
 				3F010F2621E3704B000BECCE /* Assets.xcassets */,
+				98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */,
 				3F010F2821E3704B000BECCE /* LaunchScreen.storyboard */,
 				3F010F2B21E3704B000BECCE /* Info.plist */,
 			);
@@ -244,6 +250,7 @@
 				3F010F2A21E3704B000BECCE /* LaunchScreen.storyboard in Resources */,
 				3F010F2721E3704B000BECCE /* Assets.xcassets in Resources */,
 				3F010F2521E3704B000BECCE /* Main.storyboard in Resources */,
+				98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +280,7 @@
 				3F010F2021E3704B000BECCE /* AppDelegate.swift in Sources */,
 				985DC08221E384BC006E221B /* RandomViewController.swift in Sources */,
 				985DC08421E38556006E221B /* CoinViewController.swift in Sources */,
+				98065CEF21E5E085008F8942 /* CPK3DiceAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

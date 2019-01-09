@@ -3,7 +3,7 @@
 //  Drawlots
 //
 //  Created by 林家辉 on 2019/1/7.
-//  Copyright © 2019年 Georgehu. All rights reserved.
+//  Copyright © 2019年 fcxl9876. All rights reserved.
 //
 
 import UIKit
