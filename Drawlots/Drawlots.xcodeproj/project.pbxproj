@@ -16,6 +16,7 @@
 		3F010F4021E3704C000BECCE /* DrawlotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F010F3F21E3704C000BECCE /* DrawlotsUITests.swift */; };
 		98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */; };
 		98065CEF21E5E085008F8942 /* CPK3DiceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */; };
+		98065CF321E5E9FF008F8942 /* 李旭科毛笔行书.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98065CF221E5E9FF008F8942 /* 李旭科毛笔行书.ttf */; };
 		985DC08221E384BC006E221B /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08121E384BC006E221B /* RandomViewController.swift */; };
 		985DC08421E38556006E221B /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08321E38556006E221B /* CoinViewController.swift */; };
 		985DC08621E38567006E221B /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985DC08521E38567006E221B /* DiceViewController.swift */; };
@@ -54,6 +55,7 @@
 		3F010F4121E3704C000BECCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = DiceAnimationImage.xcassets; path = Drawlots/DiceAnimationImage.xcassets; sourceTree = "<group>"; };
 		98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPK3DiceAnimationView.swift; path = Drawlots/CPK3DiceAnimationView.swift; sourceTree = "<group>"; };
+		98065CF221E5E9FF008F8942 /* 李旭科毛笔行书.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "李旭科毛笔行书.ttf"; sourceTree = "<group>"; };
 		985DC08121E384BC006E221B /* RandomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		985DC08321E38556006E221B /* CoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		985DC08521E38567006E221B /* DiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		98065CF121E5E772008F8942 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				98065CF221E5E9FF008F8942 /* 李旭科毛笔行书.ttf */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				3F010F2721E3704B000BECCE /* Assets.xcassets in Resources */,
 				3F010F2521E3704B000BECCE /* Main.storyboard in Resources */,
 				98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */,
+				98065CF321E5E9FF008F8942 /* 李旭科毛笔行书.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
