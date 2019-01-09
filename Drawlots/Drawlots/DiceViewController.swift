@@ -12,7 +12,7 @@ import AudioToolbox
 class DiceViewController: UIViewController {
     //骰子动画
     var diceAnimationView: CPK3DiceAnimationView?
-    //正在进行色子动画
+    //正在进行骰子动画
     var isDiceMoving: Bool = false
     //控制台信息
     var diceShowLabel = UILabel()
