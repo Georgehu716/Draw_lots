@@ -10,6 +10,20 @@ import UIKit
 
 class RandomViewController: UIViewController {
 
+    @IBOutlet weak var start: UITextField!
+    @IBOutlet weak var end: UITextField!
+    @IBOutlet weak var result: UILabel!
+    
+    @IBAction func random(_ sender: Any) {
+         result.text = String(Int(arc4random()) % (Int(end.text!)! - Int(start.text!)! + 1) + Int(start.text!)!)
+    }
+
+    /*
+    func randomIn(min: Int, max: Int) -> Int {
+        return Int(arc4random()) % (max - min + 1) + min
+    }
+    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
