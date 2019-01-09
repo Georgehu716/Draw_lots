@@ -15,8 +15,8 @@ class DiceViewController: UIViewController {
     //正在进行骰子动画
     var isDiceMoving: Bool = false
     //控制台信息
-    var diceShowLabel = UILabel()
-    var typeTitle = ["和值","三同号","二同号","三不同号","二不同号"]
+//    var diceShowLabel = UILabel()
+//    var typeTitle = ["和值","三同号","二同号","三不同号","二不同号"]
     var typePlays: [DiceAnimationType] = [.hzType,.same3Type,.same2Type,.diff3Type,.diff2Type]
     var diceCount = 3
     var typePlay: DiceAnimationType = .hzType
@@ -25,45 +25,45 @@ class DiceViewController: UIViewController {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor(red: 19/255.0, green: 144/255.0, blue: 81/255.0, alpha: 1.0)
         
-        let titleLabel = UILabel()
-        titleLabel.text = "晃动手机摇骰子"
-        titleLabel.textColor = UIColor.white
-        titleLabel.textAlignment = .center
-        titleLabel.frame = CGRect(x: 10, y: 50, width: self.view.frame.size.width - 20, height: 40)
-        self.view.addSubview(titleLabel)
+//        let titleLabel = UILabel()
+//        titleLabel.text = "晃动手机摇骰子"
+//        titleLabel.textColor = UIColor.white
+//        titleLabel.textAlignment = .center
+//        titleLabel.frame = CGRect(x: 10, y: 50, width: self.view.frame.size.width - 20, height: 40)
+//        self.view.addSubview(titleLabel)
+//        
+//        diceShowLabel.text = "打印骰子信息"
+//        diceShowLabel.textColor = UIColor.black
+//        diceShowLabel.textAlignment = .center
+//        diceShowLabel.numberOfLines = 0
+//        diceShowLabel.frame = CGRect(x: 10, y: self.view.center.y - 200, width: self.view.frame.size.width - 20, height: 100)
+//        self.view.addSubview(diceShowLabel)
+//        diceShowLabel.backgroundColor = UIColor.clear
         
-        diceShowLabel.text = "打印骰子信息"
-        diceShowLabel.textColor = UIColor.black
-        diceShowLabel.textAlignment = .center
-        diceShowLabel.numberOfLines = 0
-        diceShowLabel.frame = CGRect(x: 10, y: self.view.center.y - 200, width: self.view.frame.size.width - 20, height: 100)
-        self.view.addSubview(diceShowLabel)
-        diceShowLabel.backgroundColor = UIColor.clear
+//        let typeLabel = UILabel()
+//        typeLabel.text = "选择投注类型"
+//        typeLabel.textColor = UIColor.white
+//        typeLabel.textAlignment = .left
+//        typeLabel.frame = CGRect(x: 10, y: self.view.center.y - 50, width: self.view.frame.size.width - 20, height: 40)
+//        self.view.addSubview(typeLabel)
         
-        let typeLabel = UILabel()
-        typeLabel.text = "选择投注类型"
-        typeLabel.textColor = UIColor.white
-        typeLabel.textAlignment = .left
-        typeLabel.frame = CGRect(x: 10, y: self.view.center.y - 50, width: self.view.frame.size.width - 20, height: 40)
-        self.view.addSubview(typeLabel)
-        
-        let typeBtnWidth = ScreenWidth / 5.0
-        for i in 0..<5 {
-            let btn = UIButton()
-            btn.tag = 100 + i
-            btn.frame = CGRect(x: typeBtnWidth * CGFloat(i), y: self.view.center.y, width: typeBtnWidth, height: 40)
-            btn.setTitle(typeTitle[i], for: UIControlState())
-            if i == 0 {
-                btn.backgroundColor = UIColor.red
-            } else {
-                btn.backgroundColor = UIColor.white
-            }
-            btn.setTitleColor(UIColor.black, for: UIControlState())
-            btn.layer.borderWidth = 1.0
-            btn.layer.borderColor = UIColor.black.cgColor
-            btn.addTarget(self, action: #selector(self.changeType(btn:)), for: .touchUpInside)
-            self.view.addSubview(btn)
-        }
+//        let typeBtnWidth = ScreenWidth / 5.0
+//        for i in 0..<5 {
+//            let btn = UIButton()
+//            btn.tag = 100 + i
+//            btn.frame = CGRect(x: typeBtnWidth * CGFloat(i), y: self.view.center.y, width: typeBtnWidth, height: 40)
+////            btn.setTitle(typeTitle[i], for: UIControlState())
+//            if i == 0 {
+//                btn.backgroundColor = UIColor.red
+//            } else {
+//                btn.backgroundColor = UIColor.white
+//            }
+//            btn.setTitleColor(UIColor.black, for: UIControlState())
+//            btn.layer.borderWidth = 1.0
+//            btn.layer.borderColor = UIColor.black.cgColor
+//            btn.addTarget(self, action: #selector(self.changeType(btn:)), for: .touchUpInside)
+//            self.view.addSubview(btn)
+//        }
         
         let diceCount = UILabel()
         diceCount.text = "选择骰子个数"
@@ -111,7 +111,7 @@ class DiceViewController: UIViewController {
     }
     //色子动画开始
     func diceAnimationStart(){
-        self.diceShowLabel.backgroundColor = UIColor.clear
+//        self.diceShowLabel.backgroundColor = UIColor.clear
         diceAnimationView?.isHidden = false
         self.view.isUserInteractionEnabled = false
         self.isDiceMoving = true
@@ -120,17 +120,17 @@ class DiceViewController: UIViewController {
     
     //色子动画结束
     func diceAnimationStop(_ diceArr:[Int]) {
-        var message = ""
-        if diceArr.count == 1 {
-            message = " 骰子1: " + String(diceArr[0])
-        } else if  diceArr.count == 2 {
-            message = " 骰子1: " + String(diceArr[0]) + "  骰子2: " + String(diceArr[1])
-        } else if  diceArr.count == 3 {
-            message = " 骰子1: " + String(diceArr[0]) + "  骰子2: " + String(diceArr[1]) + "  骰子3: "  + String (diceArr[2])
-        }
-        self.diceShowLabel.text = "玩法" + self.diceTitle + ":" + message
-        self.diceShowLabel.backgroundColor = UIColor.white
-        diceAnimationChangeFrame()
+//        var message = ""
+//        if diceArr.count == 1 {
+//            message = " 骰子1: " + String(diceArr[0])
+//        } else if  diceArr.count == 2 {
+//            message = " 骰子1: " + String(diceArr[0]) + "  骰子2: " + String(diceArr[1])
+//        } else if  diceArr.count == 3 {
+//            message = " 骰子1: " + String(diceArr[0]) + "  骰子2: " + String(diceArr[1]) + "  骰子3: "  + String (diceArr[2])
+//        }
+//        self.diceShowLabel.text = "玩法" + self.diceTitle + ":" + message
+//        self.diceShowLabel.backgroundColor = UIColor.white
+//        diceAnimationChangeFrame()
     }
     
     func diceAnimationChangeFrame(){
@@ -187,7 +187,7 @@ class DiceViewController: UIViewController {
             btn.backgroundColor = UIColor.red
         }
         self.typePlay = self.typePlays[btn.tag - 100]
-        self.diceTitle = self.typeTitle[btn.tag - 100]
+//        self.diceTitle = self.typeTitle[btn.tag - 100]
         self.initDiceAnimationView()
     }
     //改变骰子个数
