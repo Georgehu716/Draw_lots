@@ -59,7 +59,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="A1a-nO-d68" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1478" y="461"/>
         </scene>
         <!--Random-->
         <scene sceneID="R6W-Ol-AU7">
@@ -119,7 +119,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开始"/>
                                 <connections>
-                                    <action selector="random:" destination="fC1-ib-lXf" eventType="touchUpInside" id="r1X-bF-iZT"/>
+                                    <action selector="startBtn:" destination="fC1-ib-lXf" eventType="touchUpInside" id="99p-Cm-IeN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-IU-mFa">
@@ -136,11 +136,12 @@
                         <outlet property="end" destination="hCl-Po-xZ1" id="odM-KZ-F1R"/>
                         <outlet property="result" destination="FwN-IU-mFa" id="eOf-Lu-Whd"/>
                         <outlet property="start" destination="8ia-Oe-G6U" id="vQB-uy-HwB"/>
+                        <outlet property="startBtn" destination="LG0-1g-hyr" id="ibj-Sf-sgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbW-lz-eWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-22" y="-70"/>
         </scene>
         <!--Coin-->
         <scene sceneID="2vX-pR-EaG">
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6G-N0-5kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.79999999999995" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1175" y="-293"/>
         </scene>
         <!--Dice-->
         <scene sceneID="nSI-6F-wO4">
@@ -222,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tc-Bp-uVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="689.5052473763119"/>
+            <point key="canvasLocation" x="25" y="868"/>
         </scene>
     </scenes>
 </document>
