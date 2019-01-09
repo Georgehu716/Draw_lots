@@ -193,10 +193,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKS-vX-zdv">
-                                <rect key="frame" x="67" y="115" width="240" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn5-nW-aVZ">
                                 <rect key="frame" x="67" y="355" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,14 +204,26 @@
                                 <rect key="frame" x="112" y="473" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startBtn:" destination="1A9-n8-BNL" eventType="touchUpInside" id="5TV-h4-3OO"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKS-vX-zdv">
+                                <rect key="frame" x="112" y="104" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="coinImage" destination="iKS-vX-zdv" id="Fb1-HW-7II"/>
+                        <outlet property="result" destination="gn5-nW-aVZ" id="AmY-wr-b5u"/>
+                        <outlet property="startBtn" destination="xEF-J7-oYr" id="rRl-1Y-ysW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6G-N0-5kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="-293"/>
+            <point key="canvasLocation" x="1173.5999999999999" y="-293.70314842578711"/>
         </scene>
         <!--Dice-->
         <scene sceneID="nSI-6F-wO4">
