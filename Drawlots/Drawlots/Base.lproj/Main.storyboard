@@ -71,6 +71,21 @@
                     <view key="view" contentMode="scaleToFill" id="GNy-Xs-nbL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faP-Fj-m9w">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="随机数" id="6QU-UP-Rrv">
+                                        <barButtonItem key="leftBarButtonItem" title="返回" id="zYL-X9-AOI">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="te5-W8-je3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -88,6 +103,21 @@
                     <view key="view" contentMode="scaleToFill" id="hru-EO-Hcx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-cc-a2m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="抛硬币" id="6c2-Ah-1Me">
+                                        <barButtonItem key="leftBarButtonItem" title="返回" id="Sa4-bq-Ajd">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="utr-Bs-cEu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -105,6 +135,21 @@
                     <view key="view" contentMode="scaleToFill" id="uSv-TM-d8M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txc-eW-GDf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="掷骰子" id="6ws-Z7-act">
+                                        <barButtonItem key="leftBarButtonItem" title="返回" id="m5I-sv-PO3">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="gua-YB-CjB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -112,4 +157,7 @@
             </objects>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="utr-Bs-cEu"/>
+    </inferredMetricsTieBreakers>
 </document>
