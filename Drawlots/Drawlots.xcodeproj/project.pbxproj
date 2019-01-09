@@ -14,6 +14,7 @@
 		3F010F2A21E3704B000BECCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F010F2821E3704B000BECCE /* LaunchScreen.storyboard */; };
 		3F010F3521E3704C000BECCE /* DrawlotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F010F3421E3704C000BECCE /* DrawlotsTests.swift */; };
 		3F010F4021E3704C000BECCE /* DrawlotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F010F3F21E3704C000BECCE /* DrawlotsUITests.swift */; };
+		3FC0C9B521E6412D004B432A /* CoinAnimationImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C9B421E6412D004B432A /* CoinAnimationImage.xcassets */; };
 		98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */; };
 		98065CEF21E5E085008F8942 /* CPK3DiceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */; };
 		98065CF321E5E9FF008F8942 /* 李旭科毛笔行书.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98065CF221E5E9FF008F8942 /* 李旭科毛笔行书.ttf */; };
@@ -53,6 +54,7 @@
 		3F010F3B21E3704C000BECCE /* DrawlotsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawlotsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F010F3F21E3704C000BECCE /* DrawlotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawlotsUITests.swift; sourceTree = "<group>"; };
 		3F010F4121E3704C000BECCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC0C9B421E6412D004B432A /* CoinAnimationImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoinAnimationImage.xcassets; sourceTree = "<group>"; };
 		98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = DiceAnimationImage.xcassets; path = Drawlots/DiceAnimationImage.xcassets; sourceTree = "<group>"; };
 		98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CPK3DiceAnimationView.swift; path = Drawlots/CPK3DiceAnimationView.swift; sourceTree = "<group>"; };
 		98065CF221E5E9FF008F8942 /* 李旭科毛笔行书.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "李旭科毛笔行书.ttf"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				98065CEC21E5DFB9008F8942 /* DiceAnimationImage.xcassets */,
 				98065CEE21E5E085008F8942 /* CPK3DiceAnimationView.swift */,
+				3FC0C9B421E6412D004B432A /* CoinAnimationImage.xcassets */,
 			);
 			name = Animation;
 			path = ..;
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F010F2A21E3704B000BECCE /* LaunchScreen.storyboard in Resources */,
+				3FC0C9B521E6412D004B432A /* CoinAnimationImage.xcassets in Resources */,
 				3F010F2721E3704B000BECCE /* Assets.xcassets in Resources */,
 				3F010F2521E3704B000BECCE /* Main.storyboard in Resources */,
 				98065CED21E5DFB9008F8942 /* DiceAnimationImage.xcassets in Resources */,
