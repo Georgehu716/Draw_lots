@@ -48,7 +48,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         self.init(frame: CGRect.zero)
         self.diceCount = diceCount
         self.animations = animations
-        self.diceAnimationType = diceAnimationType
+        self.diceAnimationType = .hzType
         self.setupUI()
         self.setupConstraints()
     }
@@ -196,8 +196,8 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         imageDong3.stopAnimating()
         
         //产生随机数
-        switch self.diceAnimationType {
-        case .hzType:
+//        switch self.diceAnimationType {
+//        case .hzType:
             //骰子1
             let dice1 = Int(arc4random_uniform(6)) + 1
             imageDong1.image = UIImage(named: "\(dice1).png")
@@ -208,71 +208,71 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
             let dice3 = Int(arc4random_uniform(6)) + 1
             imageDong3.image = UIImage(named: "\(dice3).png")
             self.animationStop(true, diceArr: [dice1,dice2,dice3])
-        case .diff2Type:
-            let diff2Arr = self.getRandomNumbers(2,lenth: 5)
-            //骰子1
-            imageDong1.image = UIImage(named: "\(diff2Arr[0]).png")
-            //色2
-            imageDong2.image = UIImage(named: "\(diff2Arr[1]).png")
-            //色3
-            let dice3 = Int(arc4random_uniform(6))
-            imageDong3.image = UIImage(named: "\(dice3).png")
-            self.animationStop(true, diceArr: diff2Arr)
-        case .diff3Type:
-            //从1到4
-            let diff3Arr0 = self.getRandomNumbers(1,lenth: 4)[0]
-            //从2到5
-            var diff3Arr1 = self.getRandomNumbers(1,lenth: 4)[0]
-            //从3到6
-            var diff3arr2 = self.getRandomNumbers(1,lenth: 4)[0]
-            if diff3Arr0 == 1 {
-                diff3Arr1 = self.getRandomNumbers(1,lenth: 4)[0] + 1
-                diff3arr2 = diff3arr2 + 2
-                if diff3Arr1 >= diff3arr2 {
-                    diff3arr2 = diff3Arr1 + 1
-                }
-            } else if diff3Arr0 == 2 {
-                diff3Arr1 = self.getRandomNumbers(1, lenth: 3)[0] + 2
-                diff3arr2 = self.getRandomNumbers(1, lenth: 3)[0] + 3
-                if diff3Arr1 >= diff3arr2 {
-                    diff3arr2 = diff3Arr1 + 1
-                }
-            } else if diff3Arr0 == 3 {
-                diff3Arr1 = self.getRandomNumbers(1, lenth: 2)[0] + 3
-                diff3arr2 = self.getRandomNumbers(1, lenth: 2)[0] + 4
-                if diff3Arr1 >= diff3arr2 {
-                    diff3arr2 = diff3Arr1 + 1
-                }
-            } else {
-                diff3Arr1 = 5
-                diff3arr2 = 6
-            }
-            //骰子1
-            imageDong1.image = UIImage(named: "\(diff3Arr0).png")
-            //色2
-            imageDong2.image = UIImage(named: "\(diff3Arr1 ).png")
-            //色3
-            imageDong3.image = UIImage(named: "\(diff3arr2 ).png")
-            self.animationStop(true, diceArr:[diff3Arr0 ,diff3Arr1  ,diff3arr2 ])
-        case .same2Type:
-            let same2Arr = self.getRandomNumbers(2,lenth: 6)
-            //色1
-            imageDong1.image = UIImage(named: "\(same2Arr[0]).png")
-            //色2
-            imageDong2.image = UIImage(named: "\(same2Arr[0]).png")
-            //色3
-            imageDong3.image = UIImage(named: "\(same2Arr[1]).png")
-            self.animationStop(true, diceArr: [same2Arr[0],same2Arr[0],same2Arr[1]])
-        case .same3Type:
-            let same3Arr = self.getRandomNumbers(1,lenth: 6)
-            //色1
-            imageDong1.image = UIImage(named: "\(same3Arr[0]).png")
-            //色2
-            imageDong2.image = UIImage(named: "\(same3Arr[0]).png")
-            //色3
-            imageDong3.image = UIImage(named: "\(same3Arr[0]).png")
-            self.animationStop(true, diceArr: [same3Arr[0],same3Arr[0],same3Arr[0]])
-        }
+//        case .diff2Type:
+//            let diff2Arr = self.getRandomNumbers(2,lenth: 5)
+//            //骰子1
+//            imageDong1.image = UIImage(named: "\(diff2Arr[0]).png")
+//            //色2
+//            imageDong2.image = UIImage(named: "\(diff2Arr[1]).png")
+//            //色3
+//            let dice3 = Int(arc4random_uniform(6))
+//            imageDong3.image = UIImage(named: "\(dice3).png")
+//            self.animationStop(true, diceArr: diff2Arr)
+//        case .diff3Type:
+//            //从1到4
+//            let diff3Arr0 = self.getRandomNumbers(1,lenth: 4)[0]
+//            //从2到5
+//            var diff3Arr1 = self.getRandomNumbers(1,lenth: 4)[0]
+//            //从3到6
+//            var diff3arr2 = self.getRandomNumbers(1,lenth: 4)[0]
+//            if diff3Arr0 == 1 {
+//                diff3Arr1 = self.getRandomNumbers(1,lenth: 4)[0] + 1
+//                diff3arr2 = diff3arr2 + 2
+//                if diff3Arr1 >= diff3arr2 {
+//                    diff3arr2 = diff3Arr1 + 1
+//                }
+//            } else if diff3Arr0 == 2 {
+//                diff3Arr1 = self.getRandomNumbers(1, lenth: 3)[0] + 2
+//                diff3arr2 = self.getRandomNumbers(1, lenth: 3)[0] + 3
+//                if diff3Arr1 >= diff3arr2 {
+//                    diff3arr2 = diff3Arr1 + 1
+//                }
+//            } else if diff3Arr0 == 3 {
+//                diff3Arr1 = self.getRandomNumbers(1, lenth: 2)[0] + 3
+//                diff3arr2 = self.getRandomNumbers(1, lenth: 2)[0] + 4
+//                if diff3Arr1 >= diff3arr2 {
+//                    diff3arr2 = diff3Arr1 + 1
+//                }
+//            } else {
+//                diff3Arr1 = 5
+//                diff3arr2 = 6
+//            }
+//            //骰子1
+//            imageDong1.image = UIImage(named: "\(diff3Arr0).png")
+//            //色2
+//            imageDong2.image = UIImage(named: "\(diff3Arr1 ).png")
+//            //色3
+//            imageDong3.image = UIImage(named: "\(diff3arr2 ).png")
+//            self.animationStop(true, diceArr:[diff3Arr0 ,diff3Arr1  ,diff3arr2 ])
+//        case .same2Type:
+//            let same2Arr = self.getRandomNumbers(2,lenth: 6)
+//            //色1
+//            imageDong1.image = UIImage(named: "\(same2Arr[0]).png")
+//            //色2
+//            imageDong2.image = UIImage(named: "\(same2Arr[0]).png")
+//            //色3
+//            imageDong3.image = UIImage(named: "\(same2Arr[1]).png")
+//            self.animationStop(true, diceArr: [same2Arr[0],same2Arr[0],same2Arr[1]])
+//        case .same3Type:
+//            let same3Arr = self.getRandomNumbers(1,lenth: 6)
+//            //色1
+//            imageDong1.image = UIImage(named: "\(same3Arr[0]).png")
+//            //色2
+//            imageDong2.image = UIImage(named: "\(same3Arr[0]).png")
+//            //色3
+//            imageDong3.image = UIImage(named: "\(same3Arr[0]).png")
+//            self.animationStop(true, diceArr: [same3Arr[0],same3Arr[0],same3Arr[0]])
+//        }
     }
     func animationStop(_ finish:Bool,diceArr: [Int]){
         self.diceFinishBlock(finish,diceArr)
