@@ -91,6 +91,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子1的转动图片切换
         let imageDong11 = UIImageView(frame: CGRect(x: 85.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong11.layer.position = CGPoint(x: 0, y: 200)
         imageDong11.animationDuration = 0.1
         imageDong11.animationImages = myImages
         imageDong11.startAnimating()
@@ -122,6 +123,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子2的转动图片切换
         let imageDong12 = UIImageView(frame: CGRect(x: 135.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong12.layer.position = CGPoint(x: 0, y: 200)
         imageDong12.animationDuration = 0.1
         imageDong12.animationImages = myImages
         imageDong12.startAnimating()
@@ -154,6 +156,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子3的转动图片切换
         let imageDong13 = UIImageView(frame: CGRect(x: 195.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong13.layer.position = CGPoint(x: 0, y: 200)
         imageDong13.animationDuration = 0.1
         imageDong13.animationImages = myImages
         imageDong13.startAnimating()
