@@ -2,7 +2,7 @@
 //  Random.swift
 //  Drawlots
 //
-//  Created by 林家辉 on 2019/1/7.
+//  Created by Georgehu on 2019/1/7.
 //  Copyright © 2019年 Georgehu. All rights reserved.
 //
 
