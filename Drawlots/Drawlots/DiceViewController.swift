@@ -15,7 +15,7 @@ class DiceViewController: UIViewController {
     //是否正在进行骰子动画
     var isDiceMoving: Bool = false
     //骰子动画类型
-    var typePlays: [DiceAnimationType] = [.hzType,.same3Type,.same2Type,.diff3Type,.diff2Type]
+    var typePlays: [DiceAnimationType] = [.hzType]
     var diceCount = 3
     var typePlay: DiceAnimationType = .hzType
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class DiceViewController: UIViewController {
             btn.frame = CGRect(x: diceBtnWidth * CGFloat(i), y: self.view.center.y + 100, width: diceBtnWidth, height: 40)
             btn.setTitle(String(i + 1) + "个", for: UIControlState())
             if i == 2 {
-                btn.setBackgroundImage(#imageLiteral(resourceName: "button_highlight"), for: UIControlState.normal)
+                btn.backgroundColor = UIColor.red
             } else {
                 btn.backgroundColor = UIColor.white
             }
