@@ -17,12 +17,31 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
+    //生成随机数
+    
+    /*浮点随机数
+    func randomF() -> Float {
+        return Float(arc4random())
+    }
+    func random(min: Float, max: Float) -> Float {
+        return randomF() * (max - min + 1) + min
+    }*/
+    
     @IBAction func random(_ sender: Any) {
          result.text = String(Int(arc4random()) % (Int(end.text!)! - Int(start.text!)! + 1) + Int(start.text!)!)
     }
 
     //开始按钮
     @IBAction func startBtn(_ sender: Any) {
+        if start.text == "" || end.text == ""{
+            showMsgbox(_message: "请输入随机数范围！")
+            return
+        }
+        if Int(start.text!)! > Int(end.text!)!{
+            showMsgbox(_message: "请输入正确的随机数范围！")
+            return
+        }
+        
         if(flag)
         {
             startBtn.setTitle("停止",for: .normal)
@@ -39,7 +58,15 @@ class RandomViewController: UIViewController {
         }
     }
     
-    
+    //错误提示
+    func showMsgbox(_message: String, _title: String = "提示"){
+        
+        let alert = UIAlertController(title: _title, message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        let btnOK = UIAlertAction(title: "好的", style: .default, handler: nil)
+        alert.addAction(btnOK)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     
     
