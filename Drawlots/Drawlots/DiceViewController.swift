@@ -25,14 +25,14 @@ class DiceViewController: UIViewController {
         diceCount.text = "选择骰子个数"
         diceCount.textColor = UIColor.white
         diceCount.textAlignment = .left
-        diceCount.frame = CGRect(x: 10, y: self.view.center.y + 50, width: self.view.frame.size.width - 20, height: 40)
+        diceCount.frame = CGRect(x: 10, y: self.view.center.y + 150, width: self.view.frame.size.width - 20, height: 40)
         self.view.addSubview(diceCount)
         
         let diceBtnWidth = ScreenWidth / 3.0
         for i in 0..<3 {
             let btn = UIButton()
             btn.tag = 200 + i
-            btn.frame = CGRect(x: diceBtnWidth * CGFloat(i), y: self.view.center.y + 100, width: diceBtnWidth, height: 40)
+            btn.frame = CGRect(x: diceBtnWidth * CGFloat(i), y: self.view.center.y + 200, width: diceBtnWidth, height: 40)
             btn.setTitle(String(i + 1) + "个", for: UIControlState())
             if i == 2 {
                 btn.backgroundColor = UIColor.red
@@ -47,7 +47,7 @@ class DiceViewController: UIViewController {
         }
         
         let startBtn = UIButton()
-        startBtn.frame = CGRect(x: 10, y: self.view.center.y + 150, width: ScreenWidth - 20, height: 40)
+        startBtn.frame = CGRect(x: 10, y: self.view.center.y + 250, width: ScreenWidth - 20, height: 40)
         startBtn.setTitle("摇一摇", for: UIControlState())
         startBtn.setTitleColor(UIColor.brown, for: UIControlState())
         startBtn.setBackgroundImage(#imageLiteral(resourceName: "button_default"), for: UIControlState.normal)
@@ -69,7 +69,7 @@ class DiceViewController: UIViewController {
     }
     
     //骰子动画开始
-    func diceAnimationStart(){
+    func diceAnimationStart() {
         diceAnimationView?.isHidden = false
         self.view.isUserInteractionEnabled = false
         self.isDiceMoving = true
@@ -107,35 +107,9 @@ class DiceViewController: UIViewController {
     }
     
     //按钮的点击事件
-    //改变类型
+    //改变类型（已作废）
     @objc func changeType(btn: UIButton) {
-        self.dismissDiceAnimationView()
-        for btn in self.view.subviews {
-            if btn.tag == 100 {
-                btn.backgroundColor = UIColor.white
-            } else if btn.tag == 101 {
-                btn.backgroundColor = UIColor.white
-            } else if btn.tag == 102 {
-                btn.backgroundColor = UIColor.white
-            } else if btn.tag == 103 {
-                btn.backgroundColor = UIColor.white
-            } else if btn.tag == 104 {
-                btn.backgroundColor = UIColor.white
-            }
-        }
-        if btn.tag == 100 {
-            btn.backgroundColor = UIColor.red
-        } else if btn.tag == 101 {
-            btn.backgroundColor = UIColor.red
-        } else if btn.tag == 102 {
-            btn.backgroundColor = UIColor.red
-        } else if btn.tag == 103 {
-            btn.backgroundColor = UIColor.red
-        } else if btn.tag == 104 {
-            btn.backgroundColor = UIColor.red
-        }
-        self.typePlay = self.typePlays[btn.tag - 100]
-        self.initDiceAnimationView()
+        // Do nothing.
     }
     
     //改变骰子个数

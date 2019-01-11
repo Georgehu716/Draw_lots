@@ -16,7 +16,7 @@ enum DiceAnimationType {
     case hzType
 }
 
-class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
+class CPK3DiceAnimationView: UIView ,CAAnimationDelegate {
     //骰子个数
     var diceCount: Int!
     //是否移动
@@ -57,11 +57,11 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         imageDong3 = UIImageView()
     }
     
-    func setupConstraints(){
-        
+    func setupConstraints() {
+        // Do nothing.
     }
     
-    func startAnimation(){
+    func startAnimation() {
         image1.isHidden = true;
         image2.isHidden = true;
         image3.isHidden = true;
@@ -83,7 +83,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
     }
     
     //骰子1的动画
-    func dice1Animation(){
+    func dice1Animation() {
         //******************旋转动画的初始化******************
         //******************旋转动画******************
         //******************动画组合******************
@@ -91,6 +91,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子1的转动图片切换
         let imageDong11 = UIImageView(frame: CGRect(x: 85.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong11.layer.position = CGPoint(x: 0, y: 200)
         imageDong11.animationDuration = 0.1
         imageDong11.animationImages = myImages
         imageDong11.startAnimating()
@@ -101,10 +102,10 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         
         //骰子1的位置变化
         let dice1Point = self.getRandomNumbers(8, lenth: UInt32(ScreenWidth))
-        let p1 = CGPoint(x: CGFloat(dice1Point[0]), y: CGFloat(dice1Point[1]))
-        let p2 = CGPoint(x: CGFloat(dice1Point[2]), y: CGFloat(dice1Point[3]))
-        let p3 = CGPoint(x: CGFloat(dice1Point[4]), y: CGFloat(dice1Point[5]))
-        let p4 = CGPoint(x: CGFloat(dice1Point[6]), y: CGFloat(dice1Point[7]))
+        let p1 = CGPoint(x: CGFloat(dice1Point[0]), y: CGFloat(dice1Point[1]+114))
+        let p2 = CGPoint(x: CGFloat(dice1Point[2]), y: CGFloat(dice1Point[3]+114))
+        let p3 = CGPoint(x: CGFloat(dice1Point[4]), y: CGFloat(dice1Point[5]+114))
+        let p4 = CGPoint(x: CGFloat(dice1Point[6]), y: CGFloat(dice1Point[7]+114))
         let keypoint = [NSValue(cgPoint: p1),NSValue(cgPoint: p2),NSValue(cgPoint: p3),NSValue(cgPoint: p4)]
         let animation1 = CAKeyframeAnimation(keyPath: "position")
         animation1.values = keypoint
@@ -117,11 +118,13 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         animGroup1.delegate = self
         imageDong11.layer.add(animGroup1, forKey: "position")
     }
-    func dice2Animation(){
+    
+    func dice2Animation() {
         //转动骰子的载入
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子2的转动图片切换
         let imageDong12 = UIImageView(frame: CGRect(x: 135.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong12.layer.position = CGPoint(x: 0, y: 200)
         imageDong12.animationDuration = 0.1
         imageDong12.animationImages = myImages
         imageDong12.startAnimating()
@@ -131,10 +134,10 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         
         //骰子2的位置变化
         let dice2Point = self.getRandomNumbers(8, lenth: UInt32(ScreenWidth))
-        let p21 = CGPoint(x: CGFloat(dice2Point[0]), y: CGFloat(dice2Point[1]))
-        let p22 = CGPoint(x: CGFloat(dice2Point[2]), y: CGFloat(dice2Point[3]))
-        let p23 = CGPoint(x: CGFloat(dice2Point[4]), y: CGFloat(dice2Point[5]))
-        let p24 = CGPoint(x: CGFloat(dice2Point[6]), y: CGFloat(dice2Point[7]))
+        let p21 = CGPoint(x: CGFloat(dice2Point[0]), y: CGFloat(dice2Point[1]+114))
+        let p22 = CGPoint(x: CGFloat(dice2Point[2]), y: CGFloat(dice2Point[3]+114))
+        let p23 = CGPoint(x: CGFloat(dice2Point[4]), y: CGFloat(dice2Point[5]+114))
+        let p24 = CGPoint(x: CGFloat(dice2Point[6]), y: CGFloat(dice2Point[7]+114))
         
         let keypoint2 = [NSValue(cgPoint: p21),NSValue(cgPoint: p22),NSValue(cgPoint: p23),NSValue(cgPoint: p24)]
         let animation2 = CAKeyframeAnimation(keyPath: "position")
@@ -149,11 +152,12 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         
     }
     
-    func dice3Animation(){
+    func dice3Animation() {
         //转动骰子的载入
         let myImages:[UIImage] = [UIImage(named:"7.png")!,UIImage(named:"8.png")!,UIImage(named:"9.png")!]
         //骰子3的转动图片切换
         let imageDong13 = UIImageView(frame: CGRect(x: 195.0, y: 115.0, width: 90.0,height: 90.0))
+        //imageDong13.layer.position = CGPoint(x: 0, y: 200)
         imageDong13.animationDuration = 0.1
         imageDong13.animationImages = myImages
         imageDong13.startAnimating()
@@ -162,10 +166,10 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         
         //骰子3的位置变化
         let dice3Point = self.getRandomNumbers(8, lenth: UInt32(ScreenWidth))
-        let p31 = CGPoint(x: CGFloat(dice3Point[0]), y: CGFloat(dice3Point[1]))
-        let p32 = CGPoint(x: CGFloat(dice3Point[2]), y: CGFloat(dice3Point[3]))
-        let p33 = CGPoint(x: CGFloat(dice3Point[4]), y: CGFloat(dice3Point[5]))
-        let p34 = CGPoint(x: CGFloat(dice3Point[6]), y: CGFloat(dice3Point[7]))
+        let p31 = CGPoint(x: CGFloat(dice3Point[0]), y: CGFloat(dice3Point[1]+114))
+        let p32 = CGPoint(x: CGFloat(dice3Point[2]), y: CGFloat(dice3Point[3]+114))
+        let p33 = CGPoint(x: CGFloat(dice3Point[4]), y: CGFloat(dice3Point[5]+114))
+        let p34 = CGPoint(x: CGFloat(dice3Point[6]), y: CGFloat(dice3Point[7]+114))
         let keypoint3 = [NSValue(cgPoint: p31),NSValue(cgPoint: p32),NSValue(cgPoint: p33),NSValue(cgPoint: p34)]
         let animation3 = CAKeyframeAnimation(keyPath: "position")
         animation3.values = keypoint3
@@ -200,7 +204,7 @@ class CPK3DiceAnimationView: UIView ,CAAnimationDelegate{
         self.animationStop(true, diceArr: [dice1,dice2,dice3])
     }
     
-    func animationStop(_ finish:Bool,diceArr: [Int]){
+    func animationStop(_ finish:Bool,diceArr: [Int]) {
         self.diceFinishBlock(finish,diceArr)
     }
     
