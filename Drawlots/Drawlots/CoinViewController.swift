@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SpriteKit
+import AVFoundation
+import AudioToolbox
+
 
 class CoinViewController: UIViewController {
 
     var flag: Bool = true
     var timer = Timer()
     var coin: Int!
+    var audioPlayer: AVAudioPlayer!
     
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var startBtn: UIButton!
@@ -37,6 +42,7 @@ class CoinViewController: UIViewController {
     @IBAction func startBtn(_ sender: Any) {
         if(flag)
         {
+            audioPlayer.play()
             startBtn.setTitle("停止",for: .normal)
             flag = false
             //启用计时器，控制每秒执行一次tickDown方法
@@ -63,8 +69,20 @@ class CoinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //音频播放器
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+        let soundFileURL: NSURL = NSURL.init(fileURLWithPath: NSTemporaryDirectory()+"sound.caf")
+        let soundSetting = [
+            AVSampleRateKey: 44100.0,
+            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC),
+            AVNumberOfChannelsKey: 2,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ] as [String : Any]
         
-        // Do any additional setup after loading the view.
+        //audioRecorder = try?AVAudioRecorder(URL: soundFileURL, setting: soundSetting)
+        
+        let noSoundFileURL: NSURL = NSURL.init(fileURLWithPath: Bundle.main.path(forResource: "coin", ofType: "wav")!)
+        audioPlayer = try?AVAudioPlayer(contentsOf: noSoundFileURL as URL)        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

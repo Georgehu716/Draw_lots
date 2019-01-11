@@ -51,7 +51,7 @@ class RandomViewController: UIViewController {
         
         if(flag)
         {
-            audioPlayer.play()
+            //audioPlayer.play()
             startBtn.setTitle("停止",for: .normal)
             flag = false
             //启用计时器，控制每秒执行一次tickDown方法

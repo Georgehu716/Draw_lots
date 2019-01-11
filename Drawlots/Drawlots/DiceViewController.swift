@@ -8,8 +8,14 @@
 
 import UIKit
 import AudioToolbox
+import SpriteKit
+import AVFoundation
+
 
 class DiceViewController: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer!
+    
     //骰子动画
     var diceAnimationView: CPK3DiceAnimationView?
     //是否正在进行骰子动画
@@ -20,6 +26,21 @@ class DiceViewController: UIViewController {
     var typePlay: DiceAnimationType = .hzType
     override func viewDidLoad() {
         super.viewDidLoad()
+        //音频播放器
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+        let soundFileURL: NSURL = NSURL.init(fileURLWithPath: NSTemporaryDirectory()+"sound.caf")
+        let soundSetting = [
+            AVSampleRateKey: 44100.0,
+            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC),
+            AVNumberOfChannelsKey: 2,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ] as [String : Any]
+        
+        //audioRecorder = try?AVAudioRecorder(URL: soundFileURL, setting: soundSetting)
+        
+        let noSoundFileURL: NSURL = NSURL.init(fileURLWithPath: Bundle.main.path(forResource: "dice", ofType: "wav")!)
+        audioPlayer = try?AVAudioPlayer(contentsOf: noSoundFileURL as URL)
+        
         
         let diceCount = UILabel()
         diceCount.text = "选择骰子个数"
@@ -70,6 +91,7 @@ class DiceViewController: UIViewController {
     
     //骰子动画开始
     func diceAnimationStart() {
+        audioPlayer.play()
         diceAnimationView?.isHidden = false
         self.view.isUserInteractionEnabled = false
         self.isDiceMoving = true
