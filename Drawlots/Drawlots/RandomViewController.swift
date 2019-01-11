@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import SpriteKit
+import AVFoundation
+import AudioToolbox
+
 
 class RandomViewController: UIViewController {
 
     var flag: Bool = true
     var timer = Timer()
+    var audioPlayer: AVAudioPlayer!
+    
     @IBOutlet weak var start: UITextField!
     @IBOutlet weak var end: UITextField!
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
-    //生成随机数
     
+    
+    //生成随机数
     /*浮点随机数
     func randomF() -> Float {
         return Float(arc4random())
@@ -44,6 +51,7 @@ class RandomViewController: UIViewController {
         
         if(flag)
         {
+            audioPlayer.play()
             startBtn.setTitle("停止",for: .normal)
             flag = false
             //启用计时器，控制每秒执行一次tickDown方法
@@ -73,6 +81,20 @@ class RandomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //音频播放器
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+        let soundFileURL: NSURL = NSURL.init(fileURLWithPath: NSTemporaryDirectory()+"sound.caf")
+        let soundSetting = [
+            AVSampleRateKey: 44100.0,
+            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC),
+            AVNumberOfChannelsKey: 2,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ] as [String : Any]
+        
+        //audioRecorder = try?AVAudioRecorder(URL: soundFileURL, setting: soundSetting)
+        
+        let noSoundFileURL: NSURL = NSURL.init(fileURLWithPath: Bundle.main.path(forResource: "bg", ofType: "mp3")!)
+        audioPlayer = try?AVAudioPlayer(contentsOf: noSoundFileURL as URL)
 
         // Do any additional setup after loading the view.
     }
